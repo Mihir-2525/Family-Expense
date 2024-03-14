@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/responsive.css">
+    <link rel="stylesheet" href="../src/style/style.css" />
+    <link rel="stylesheet" href="../src/style/tablet.css" />
+    <link rel="stylesheet" href="../src/style/mobile.css" />
+    <link rel="stylesheet" href="../src/style/colors.css" />
+    <link rel="stylesheet" href="../src/style/nav.css" />
+    <!-- Logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../src/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/logo/favicon-16x16.png">
+    <link rel="manifest" href="../src/logo/site.webmanifest">
+    <link rel="mask-icon" href="../src/logo/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#002e12">
+  </head>
+  <body>
+    <nav class="navbar" id="myNavbar">
+      <a href="..">Family Expense</a>
+      <a href="../Transaction/">Transactions</a>
+      <a href="../About">About</a>
+      <div class="login">
+        <a href="../CreateAccount/">Create Account</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="nav_responsive()">&#9776;</a>
+    </nav>
+    <div class="container">
+      <h1 style="text-align: center;">Login</h1>
+      <form action="" class="form">
+        <div class="row">
+          <label for="mail">Email :</label>
+          <input class="inpt" type="mail" name="mail" id="mail" />
+        </div>
+        <div class="row">
+          <label for="password">Password :</label>
+          <input class="inpt" type="password" name="password" id="password" />
+        </div>
+        <a href="/" class="center_align"
+          ><button class="login_button">Login</button></a
+        >
+        <span class="data">Create account : <a href="../CreateAccount/" class="signup_link">Sign Up</a></span>
+      </form>
+    </div>
+    <script src="../src/script/nav.js"></script>
+  </body>
+</html>

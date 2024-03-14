@@ -1,0 +1,66 @@
+:root {
+  /* Blue Theme   */
+  /* Col - 1 */
+  /* --dark: #04364A;
+  --dark1: #176B87;
+  --light: #64CCC5;
+  --light1: #DAFFFB; */
+  /* Col - 2 */
+  /* --dark: #053B50;
+  --dark1: #176B87;
+  --light: #64CCC5;
+  --light1: #EEEEEE; */
+  /* Col - 3 */
+  /* --dark: #800000;
+  --dark1: #fff;
+  --light: #c97979;
+  --light1: #230a13; */
+  /* Col - 4 */
+  --dark: #244c3c;
+  --dark1: #dcdcbbd1;
+  --light: #425e6a;
+  --light1: #526c5b;
+  /* Col - 5 */
+  /* --dark: #0F6757;
+  --dark1: #14A073;
+  --light: #BCCCC9;
+  --light1: #8A9294; */
+
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-color: #244c3c;
+  color: var(--light1);
+  background-size: contain;
+}
+
+.personal-graph,
+.family-graph,
+.family-history,
+.form,
+.data-history{
+  background-color: var(--dark1);
+}
+
+
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 5px;
+  transition: 1s;
+  /* padding: 1px; */
+}
+
+::-webkit-scrollbar:hover {
+  width: 7.7px;
+  /* padding: 1px; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark);
+}

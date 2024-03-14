@@ -1,0 +1,27 @@
+@media screen and (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .graph-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .graph-group > div {
+    margin: 10px 0;
+    width: 90vw;
+    height: 70vw;
+  }
+  .expense-data{
+    flex-direction: column-reverse;
+  }
+  .form{
+    margin: 20px 0 0 0;
+  }
+
+  .family-history{
+    height: 25vh;
+    margin-bottom: 20px;
+  }
+}

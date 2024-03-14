@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../login/src/style.css">
+    <link rel="stylesheet" href="../login/src/responsive.css">
+    <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="stylesheet" href="../src/style/tablet.css">
+    <link rel="stylesheet" href="../src/style/mobile.css">
+    <link rel="stylesheet" href="../src/style/colors.css">
+    <link rel="stylesheet" href="../src/style/nav.css">
+
+    <!-- Logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../src/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/logo/favicon-16x16.png">
+    <link rel="manifest" href="../src/logo/site.webmanifest">
+    <link rel="mask-icon" href="../src/logo/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#002e12">
+
+    <style>
+        /* Form Height */
+        .form {
+            /* min-height: 65vh; */
+            height: auto;
+        }
+
+        .active {
+            border: 0;
+        }
+
+        .error-message {
+            color: red;
+            opacity: 0;
+            /* Initially hide the error message */
+            transition: opacity 0.5s ease;
+            /* Apply transition to opacity */
+            /* width: 37.5vw; Adjusted width as needed */
+        }
+
+        .row {
+            margin: 4px 0 0 0;
+        }
+
+        .error-message.active {
+            opacity: 1;
+            /* Show the error message */
+            display: contents;
+            background-color: var(--dark1);
+        }
+
+        .pass-message {
+            display: none;
+        }
+
+        .pass-message.active {
+            display: block;
+            color: red;
+        }
+
+        @media screen and (max-width: 820px) {
+            .form {
+                min-height: 55vh;
+            }
+
+            .error-message {
+                width: 76vw;
+                /* Adjusted width as needed */
+                font-size: larger;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="myNavbar">
+        <a href="..">Family Expense</a>
+        <a href="../Transaction/">Transactions</a>
+        <a href="../About">About</a>
+        <div class="login">
+            <a href="../login">Login</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="nav_responsive()">☰</a>
+    </nav>
+    <div class="container">
+        <h1 style="text-align: center">Create Account</h1>
+        <form action="" class="form">
+            <div class="row">
+                <label for="name">Name :</label>
+                <input class="inpt" type="text" name="name" id="name" required />
+            </div>
+            <div class="row">
+                <label for="mobile-no">Mobile no. :</label>
+                <input class="inpt" type="number" name="mobile-no" id="mobile-no" oninput="validateMobile()" required />
+                <span id="mobile-error" class="error-message"></span>
+            </div>
+            <div class="row">
+                <label for="mail">Email :</label>
+                <input class="inpt" type="email" name="mail" id="mail" required />
+            </div>
+            <div class="row">
+                <label for="password">Password :</label>
+                <input class="inpt" type="password" name="pass" id="pass" oninput="validatePassword()"
+                    onfocus="displayValidation()" required />
+                <span id="password-error-letter" class="pass-message">Minimum Password Length 8 letter</span>
+                <div style="display: flex">
+                    <span id="password-error-uppercase" style="margin-inline-end: 40px" class="pass-message">1 Uppercase
+                        Letter</span>
+                    <span id="password-error-lowercase" class="pass-message">1 lowercase Letter</span>
+                </div>
+                <div style="display: flex">
+                    <span id="password-error-digit" style="margin-inline-end: 40px" class="pass-message">1 Digit</span>
+                    <span id="password-error-specialchar" class="pass-message">1 Special Character</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="confirm-password">Confirm Password :</label>
+                <input class="inpt" type="password" name="confirm-pass" id="confirm-pass"
+                    oninput="validateConfirmPassword()" required />
+                <span id="confirm-password-error" class="error-message"></span>
+            </div>
+            <!-- Checkbox for View Password -->
+            <div class="row" style="flex-direction: row">
+                <input type="checkbox" name="view-pass" id="view-pass" style="margin: 0 5px; width: auto" /><label
+                    for="view-pass">Show Password</label>
+            </div>
+            <a href="/" class="center_align"><button id="login-button" class="login_button">Sign Up</button></a>
+            <span class="data">Already have an Account : <a href="../login/" class="signup_link">Log In</a></span>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="../src/script/nav.js"></script>
+</body>
+
+</html>

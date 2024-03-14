@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 5px 5px 0 5px;
+}
+
+/* Laptop View (Default)*/
+/* Line-1 */
+.graph {
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.graph-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.personal-graph,
+.family-graph {
+  margin: 0 5px;
+  width: 35vw;
+}
+
+/* Family Transaction History */
+.family-history {
+  margin: 0 0 0 5px;
+  width: 25vw;
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+  transition: 1s;
+  overflow-y: auto;
+  /* Add scrollbar when content overflows vertically */
+}
+
+.family-history:hover {
+  border-radius: 20px;
+  border: 1px solid var(--dark);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+  transform: scale(1.02);
+}
+
+.family-history ul {
+  padding: 0;
+}
+
+.family-history ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid var(--dark);
+  break-inside: avoid-column;
+  /* Prevent list items from breaking across columns */
+}
+
+@media screen and (min-width: 640px) and (max-width:820px) {
+  .family-history ul {
+    columns: 2;
+    /* Set the number of columns */
+    column-gap: 20px;
+    /* Adjust the gap between columns */
+  }
+}
+
+.personal-graph,
+.family-graph,
+.family-history {
+  height: 25vw;
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+  text-align: center;
+  transition-duration: 1s;
+}
+
+.personal-graph:hover,
+.family-graph:hover,
+.family-history:hover {
+  border-radius: 20px;
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+
+/* Line-2 */
+.expense-data {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.entry-data {
+  width: 350px;
+  /* padding: 10px 0 0 0; */
+}
+
+.form {
+  margin: 10px 10px 10px 0;
+  padding: 20px;
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  object-fit: contain;
+  justify-content: center;
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+  transition-duration: 1s;
+}
+
+.form:hover {
+  box-shadow: 0 3px 10px #00000099;
+  border-radius: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+td input[type="number"],
+select {
+  width: -webkit-fill-available;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid var(--dark);
+  border-radius: 2px;
+  background-color: #107655c3;
+  color: var(--dark1);
+  transition-duration: 1s;
+}
+
+/* Type='Number' Remove two buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Personal Transaction Data */
+.data-history {
+  padding: 5px;
+  width: 67.5vw;
+  height: 45vh;
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+  transition: 1s;
+  overflow-y: auto;
+  /* Add scrollbar when content overflows vertically */
+}
+
+.data-history:hover {
+  border-radius: 20px;
+  border: 1px solid var(--dark);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+  transform: scale(1.03);
+}
+
+.data-history ul {
+  padding: 0;
+}
+
+.data-history ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid var(--dark);
+  break-inside: avoid-column;
+  /* Prevent list items from breaking across columns */
+}
+
+@media screen and (min-width: 640px) {
+  .data-history ul {
+    columns: 2;
+    /* Set the number of columns */
+    column-gap: 20px;
+    /* Adjust the gap between columns */
+  }
+}
